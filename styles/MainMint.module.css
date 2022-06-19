@@ -1,0 +1,125 @@
+.text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  min-width: 280px;
+  margin: 30px auto;
+  margin-top: 80px;
+}
+
+.mint_container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.mint_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mint_title {
+  font-size: 70px;
+  text-shadow: 0 5px black;
+  text-align: center;
+  font-family: "Goldman";
+  text-transform: uppercase;
+}
+
+.mint_card div {
+  display: flex;
+  flex-direction: row;
+}
+
+.count_button_left {
+  display: flex;
+  background-color: var(--action-color2);
+  border-radius: 10px 0px 0px 10px;
+  box-shadow: 0px 2px 2px 1px #0f0f0f;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px;
+  font-size: 40px;
+  width: 50px;
+  height: 45px;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+.count_button_right {
+  display: flex;
+  background-color: var(--action-color2);
+  border-radius: 0px 10px 10px 0px;
+  box-shadow: 0px 2px 2px 1px #0f0f0f;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px;
+  font-size: 40px;
+  width: 50px;
+  height: 45px;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+.count_button_right p,
+.count_button_left p {
+  font-family: monospace;
+}
+
+.count_button_right:hover,
+.count_button_left:hover {
+  opacity: 83%;
+}
+
+.count_input {
+  font-family: inherit;
+  width: 80px;
+  text-align: center;
+  font-size: 26px;
+  height: 45px;
+  border: 1px solid white;
+  padding-left: 12px;
+}
+
+.text_disclaimer {
+  margin-top: 70px;
+  font-size: 24px;
+  letter-spacing: -5.5%;
+  /* font-family: 'VT323'; */
+  text-shadow: 0 3px #000000;
+  color: white;
+}
+
+.main_mint_text {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -5.5%;
+  text-shadow: 0 2px 2px #000000;
+}
+
+@media (max-width: 768px) {
+  .text_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    min-width: 280px;
+    margin: 30px auto;
+    margin-top: 20px;
+  }
+
+  .mint_title {
+    font-size: 40px;
+  }
+}

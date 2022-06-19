@@ -1,0 +1,89 @@
+.teamCardContainer {
+  position: inherit;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 950px;
+  display: flex;
+  flex-direction: row;
+}
+
+.teamCardTitle {
+  padding-top: 100px;
+  padding-bottom: 32px;
+  font-size: 40px;
+  font-family: "Goldman";
+  text-transform: uppercase;
+}
+
+.teamColumn {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.teamCard {
+  padding: 12px;
+  background-color: var(--action-color2);
+  border-radius: 12px;
+}
+
+.teamCard img {
+  object-fit: cover;
+  width: 90%;
+  border-radius: 50%;
+  /*   width: 150px;
+  height: 150px; */
+
+  /* border-radius: 50%; */
+}
+
+/* Some left and right padding inside the container */
+.teamContainer {
+  padding: 0 8px;
+}
+
+.teamRow {
+  margin: 0px 32px;
+}
+
+.teamTitle {
+  color: grey;
+  margin-top: 4px;
+}
+
+.teamButton {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 12px;
+  display: none;
+}
+
+.teamButton:hover {
+  background-color: #555;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .teamColumn {
+    width: 50%;
+    display: block;
+  }
+  .teamButton {
+    display: none;
+  }
+  .teamContainer h2 {
+    font-size: 16px;
+  }
+  .teamCardTitle {
+    padding-top: 80px;
+  }
+}

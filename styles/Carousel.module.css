@@ -1,0 +1,152 @@
+.carousel_container {
+  margin: 20px auto;
+  height: 100%;
+  max-width: 950px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.carousel_title {
+  padding-top: 100px;
+  margin-bottom: 32px;
+  font-size: 40px;
+  font-family: "Goldman";
+  text-transform: uppercase;
+}
+
+.card {
+  display: flex;
+  height: 240px;
+  width: 180px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+  margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  text-transform: uppercase;
+}
+
+.bar {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0, 154, 217);
+  background: linear-gradient(
+    90deg,
+    rgba(19, 25, 41, 1) 0%,
+    rgba(0, 154, 217, 1) 25%,
+    rgba(26, 188, 156, 1) 100%
+  );
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  /* position: absolute;
+  top: 150px;
+  left: calc(50% - 60px); */
+  /* margin-top: 150px; */
+  margin: 0 auto;
+}
+
+.nft_image {
+  padding-top: 68px;
+  /* border-radius: 10px; */
+
+  height: 200px;
+  width: 150px;
+  margin: 0 auto;
+}
+.nft_image img {
+  border-radius: 10px;
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+@media (max-width: 768px) {
+  .container {
+    position: inherit;
+    top: inherit;
+    left: -200px;
+    /* margin-top: 20px;
+    height: 300px;
+    width: 600px;
+    display: flex; */
+
+    /* visibility: hidden; */
+    /* height: 0px; */
+    margin: 20px auto;
+    width: 300px;
+  }
+
+  .card:not(:first-child) {
+    margin-left: -150px;
+  }
+
+  .card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+    z-index: 5;
+  }
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+    /* background-color: red; */
+  }
+}

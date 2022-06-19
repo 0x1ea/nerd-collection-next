@@ -1,0 +1,11 @@
+.under_construction {
+  margin: 200px auto;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .under_construction {
+    font-size: 32px;
+  }
+}

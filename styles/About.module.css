@@ -1,0 +1,19 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 300px;
+  padding: 4px;
+  margin: 12px;
+}
+
+.aboutContainer p {
+  display: flex;
+  justify-content: baseline;
+}
+
+@media (max-width: 768px) {
+  .aboutContainer p {
+    margin: 0 auto;
+  }
+}
