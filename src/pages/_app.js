@@ -1,30 +1,31 @@
 import "../styles/App.css"
 import "@rainbow-me/rainbowkit/styles.css"
-
 import { getDefaultWallets, RainbowKitProvider, darkTheme } from "@rainbow-me/rainbowkit"
-import { chain, configureChains, createClient, WagmiConfig } from "wagmi"
-import { infuraProvider } from "wagmi/providers/infura"
+
+import { WagmiConfig, chain, createClient, configureChains, defaultChains } from "wagmi"
 import { publicProvider } from "wagmi/providers/public"
 
+import { infuraProvider } from "wagmi/providers/infura"
+
+
 const { chains, provider } = configureChains(
-  [chain.rinkeby /* , chain.hardhat */],
-  [infuraProvider({ infuraId: process.env.REACT_APP_INFURA_KEY }), publicProvider()]
+  [chain.rinkeby],
+  [infuraProvider({ infuraId: process.env.INFURA_KEY }), publicProvider()]
 )
 
 const { connectors } = getDefaultWallets({
-  appName: "Nerd Collection",
+  appName: "Color Of Universe",
   chains,
 })
 
-const wagmiClient = createClient({
-  autoConnect: true,
-  connectors,
+const client = createClient({
   provider,
+  connectors,
+  autoConnect: true,
 })
-
 function MyApp({ Component, pageProps }) {
   return (
-    <WagmiConfig client={wagmiClient}>
+    <WagmiConfig client={client}>
       <RainbowKitProvider chains={chains} theme={darkTheme()}>
         <Component {...pageProps} />
       </RainbowKitProvider>
