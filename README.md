@@ -1,4 +1,5 @@
 # Nerd Website
+Live demo on Rinkeby [here](https://nerdcollection.netlify.app/).
 
 ## Development
 To setup the development environment first clone the repo:
